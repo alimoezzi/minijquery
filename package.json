@@ -5,6 +5,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
+    "debug": "node --inspect-brk ./lib/index.js",
     "test": "npm run lint && npm run cover",
     "test:prod": "cross-env BABEL_ENV=production npm run test",
     "test:only": "mocha --require babel-core/register --require babel-polyfill --recursive",
@@ -28,15 +29,15 @@
     "js",
     "javascript",
     "web",
-	"npm",
-	"node"
+    "npm",
+    "node"
   ],
   "author": "realsarm",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/realsarm/mini-jquery/issues"
   },
-  "homepage": "https://github.com/realsarm/mini-jquery#readme"
+  "homepage": "https://github.com/realsarm/mini-jquery#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.1",
