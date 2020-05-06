@@ -10,6 +10,10 @@
 -   **CI** - _TravisCI_ configuration setup
 -   **Minify** - Built code will be minified for performance
 
+# Installation
+
+-   `npm i @realsarm/minijquery --save`
+
 # Commands
 
 -   `npm run clean` - Remove `lib/` directory
