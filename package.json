@@ -13,6 +13,7 @@
     "test:examples": "node examples/",
     "cover": "nyc --check-coverage npm run test:only",
     "lint": "eslint src test",
+    "doc": "documentation readme src/index.js --section=API --document-exported",
     "build": "cross-env BABEL_ENV=production babel src --out-dir lib",
     "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
   },
