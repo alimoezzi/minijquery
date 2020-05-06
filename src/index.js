@@ -1,10 +1,10 @@
 class MinijQuery {
-  constructor({ element }) {
-    this.element = element
+  constructor(element) {
+    this.element = element;
   }
 
   addClass(classes) {
-    this.element.className.concat(` ${ a.classes }`);
+    this.element.className.concat(` ${classes}`);
   }
 
   attr(attrName) {
@@ -16,30 +16,28 @@ class MinijQuery {
   }
 
   click(callback) {
-    return this.element.onclick = callback;
+    this.element.onclick = callback;
   }
 
-  empty(callback) {
-    Array(this.element.children).map(value => {
-      this.element.removeChild(value);
-    }, this)
+  empty() {
+    Array(this.element.children).map(value => (
+      this.element.removeChild(value)), this);
   }
 
-  fadeToggle(duration_time_second) {
+  fadeToggle(durationTimeSecond) {
     let i = this.element.style.opacity;
-    let j = this.element.style.transition;
-    if (i === "" || i === 1) {
-      j = `all ${ duration_time_second }s ease```;
+    if (i === '' || i === 1) {
+      this.element.style.transition = `all ${durationTimeSecond}s ease```;
       i = 0;
     } else {
-      j = `all ${ duration_time_second }s ease`;
+      this.element.style.transition = `all ${durationTimeSecond}s ease`;
       i = 1;
     }
   }
 
   hasClass(className) {
-    let i = this.element.className;
-    let r = i.match(className);
+    const i = this.element.className;
+    const r = i.match(className);
     return r !== null;
   }
 
@@ -55,7 +53,6 @@ class MinijQuery {
   toggleClass(className) {
     this.element.classList.toggle(className);
   }
-
 }
 
-export { MinijQuery };
+export default MinijQuery;
